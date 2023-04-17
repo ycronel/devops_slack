@@ -17,5 +17,12 @@ pipeline {
                  ) 
             }
         }
+        stage('e-mail') {
+            steps {
+                emailext    body: 'Test Message',
+                            subject: '$DEFAULT_SUBJECT',
+                            to: 'caroline-lenorcy@orange.fr' 
+            }
+        }
     }
 }
