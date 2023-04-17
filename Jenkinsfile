@@ -1,6 +1,5 @@
 node {
     stage("speak") {
-        echo "Hello, Word!"
-        println "Goodbye, Word!"
+        slackSend color: '#BADA55', message: 'Hello World
     }
 }
